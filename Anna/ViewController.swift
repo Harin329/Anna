@@ -16,8 +16,16 @@ class ViewController: UIViewController {
     @IBOutlet weak var OpenImage: UIImageView!
     @IBOutlet weak var Greeting: UILabel!
     
+    var password = "Harin"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        db.collection("Password").document("Password").getDocument { (document, error) in
+            if let document = document, document.exists {
+                self.password = document.get("?") as! String
+            }
+        }
         
         // get the current date and time
         let currentDateTime = Date()
@@ -55,13 +63,14 @@ class ViewController: UIViewController {
                 for document in querySnapshot!.documents {
                     today = DayGift(ID: document.documentID, data: document.data())
                     if (document.get("Opened") as! Bool) {
-                        self.OpenImage.image = UIImage(named: "gift")
+                        self.OpenImage.image = UIImage(systemName: "gift")
                     } else  {
-                        self.OpenImage.image = UIImage(named: "gift.fill")
+                        self.OpenImage.image = UIImage(systemName: "gift.fill")
                     }
                 }
             }
         }
+        
     }
     
     @IBAction func OpenDay(_ sender: Any) {
@@ -72,6 +81,7 @@ class ViewController: UIViewController {
                 let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
                 let vc = storyboard.instantiateViewController(withIdentifier: "DailyBoard") as! DailyViewController
                 vc.DayData = today
+                self.OpenImage.image = UIImage(systemName: "gift")
                 self.present(vc, animated:true, completion:nil)
             })
             
@@ -81,5 +91,27 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBAction func Secret(_ sender: Any) {
+        //1. Create the alert controller.
+        let alert = UIAlertController(title: "What's The Password", message: "???", preferredStyle: .alert)
+
+        //2. Add the text field. You can configure it however you need.
+        alert.addTextField { (textField) in
+            textField.placeholder = "Enter Password"
+        }
+
+        // 3. Grab the value from the text field, and print it when the user clicks OK.
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak alert] (_) in
+            let textField = alert?.textFields![0] // Force unwrapping because we know it exists.
+            if (textField?.text == self.password) {
+                let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+                let vc = storyboard.instantiateViewController(withIdentifier: "SecretViewController") as! SecretViewController
+                self.present(vc, animated:true, completion:nil)
+            }
+        }))
+
+        // 4. Present the alert.
+        self.present(alert, animated: true, completion: nil)
+    }
 }
 

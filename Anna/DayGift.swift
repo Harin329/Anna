@@ -14,18 +14,23 @@ public struct DayGift {
     var Date: String
     var Link: String
     var Message: String
-    var Image: String
+    var Image: StorageReference
     var Opened: Bool
 }
 
 // MARK: - init
 extension DayGift {
     init(ID: String, data: [String:Any]) {
+        let str = (data["Date"] as? String ?? "")
+        let delimiter = ","
+        let parts = str.components(separatedBy: delimiter)
+        let day = parts[0]
+        
         self.ID = ID
         self.Date = data["Date"] as? String ?? ""
         self.Link = data["Link"] as? String ?? ""
         self.Message = data["Message"] as? String ?? ""
-        self.Image = "gs://anna-and-harin.appspot.com/DailyPicture/" + (data["Date"] as? String ?? "") + ".JPG"
+        self.Image = Storage.storage().reference().child("2020").child(day + ".JPG")
         self.Opened = data["Opened"] as? Bool ?? false
     }
 }
@@ -37,7 +42,7 @@ extension DayGift {
         self.Date = ""
         self.Link = ""
         self.Message = ""
-        self.Image = ""
+        self.Image = StorageReference()
         self.Opened = false
     }
 }

@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import FirebaseUI
 import SDWebImage
 
 class DailyViewController: UIViewController {
@@ -28,9 +29,9 @@ class DailyViewController: UIViewController {
         
         Date.text = DayData.Date
         DailyMessage.text = DayData.Message
-        if (DayData.Image != "") {
-            DailyPic.sd_setImage(with: URL(string: DayData.Image))
-        }
+        DailyPic.layer.cornerRadius = 5
+        DailyPic.sd_setImage(with: DayData.Image)
+        
         
     }
     

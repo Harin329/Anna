@@ -13,18 +13,14 @@ class SecretViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func Nothing(_ sender: Any) {
+        let alertController = UIAlertController(title: "This is my life without you :(", message: "Yup, Nothing. My life is nothing without you, I really miss you babe <3", preferredStyle: .alert)
+        let defaultAction = UIAlertAction(title: "Oh", style: .cancel, handler: nil)
+        
+        alertController.addAction(defaultAction)
+        self.present(alertController, animated: true, completion: nil)
     }
-    */
-
+    
 }
