@@ -21,6 +21,7 @@
 		BE4AB4CF2421D048004A03ED /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE4AB4CE2421D047004A03ED /* GoogleService-Info.plist */; };
 		BE4AB4D124228BD2004A03ED /* DailyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4AB4D024228BD2004A03ED /* DailyViewController.swift */; };
 		BE4AB4D324228BDC004A03ED /* SecretViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4AB4D224228BDC004A03ED /* SecretViewController.swift */; };
+		BE7D41182422958200FF19BD /* DayGift.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7D41172422958200FF19BD /* DayGift.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		BE4AB4CE2421D047004A03ED /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BE4AB4D024228BD2004A03ED /* DailyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyViewController.swift; sourceTree = "<group>"; };
 		BE4AB4D224228BDC004A03ED /* SecretViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecretViewController.swift; sourceTree = "<group>"; };
+		BE7D41172422958200FF19BD /* DayGift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayGift.swift; sourceTree = "<group>"; };
 		CE916DFBDCEC28CE34BDBB5A /* Pods-Anna-AnnaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Anna-AnnaUITests.debug.xcconfig"; path = "Target Support Files/Pods-Anna-AnnaUITests/Pods-Anna-AnnaUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		EF1764BB7075239E8132B743 /* Pods-Anna.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Anna.release.xcconfig"; path = "Target Support Files/Pods-Anna/Pods-Anna.release.xcconfig"; sourceTree = "<group>"; };
 		F19A3AF5A75191F8F1AC664B /* Pods-Anna.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Anna.debug.xcconfig"; path = "Target Support Files/Pods-Anna/Pods-Anna.debug.xcconfig"; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 				BE4AB49E2421CE65004A03ED /* AppDelegate.swift */,
 				BE4AB4A02421CE65004A03ED /* SceneDelegate.swift */,
 				BE4AB4A22421CE65004A03ED /* ViewController.swift */,
+				BE7D41172422958200FF19BD /* DayGift.swift */,
 				BE4AB4D024228BD2004A03ED /* DailyViewController.swift */,
 				BE4AB4D224228BDC004A03ED /* SecretViewController.swift */,
 				BE4AB4A42421CE65004A03ED /* Main.storyboard */,
@@ -419,6 +422,7 @@
 			files = (
 				BE4AB4D324228BDC004A03ED /* SecretViewController.swift in Sources */,
 				BE4AB4A32421CE65004A03ED /* ViewController.swift in Sources */,
+				BE7D41182422958200FF19BD /* DayGift.swift in Sources */,
 				BE4AB49F2421CE65004A03ED /* AppDelegate.swift in Sources */,
 				BE4AB4D124228BD2004A03ED /* DailyViewController.swift in Sources */,
 				BE4AB4A12421CE65004A03ED /* SceneDelegate.swift in Sources */,

@@ -7,7 +7,8 @@ target 'Anna' do
 
   # Pods for Anna
   pod 'Firebase/Firestore'
-  pod 'Firebase/Storage'	
+  pod 'Firebase/Storage'
+  pod 'FirebaseUI/Storage'	
 
   target 'AnnaTests' do
     inherit! :search_paths
