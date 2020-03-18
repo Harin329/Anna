@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>423185147461-a5jqmbgsr5dno5u8vqs82uc6kl0c9493.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.423185147461-a5jqmbgsr5dno5u8vqs82uc6kl0c9493</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCYcUSYjDolmrQwsKe1Ehs2lf_6s-n2p_w</string>
+	<key>GCM_SENDER_ID</key>
+	<string>423185147461</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>Harin.Anna</string>
+	<key>PROJECT_ID</key>
+	<string>anna-and-harin</string>
+	<key>STORAGE_BUCKET</key>
+	<string>anna-and-harin.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:423185147461:ios:091c3e06433b5988c2a52c</string>
+	<key>DATABASE_URL</key>
+	<string>https://anna-and-harin.firebaseio.com</string>
+</dict>
+</plist>

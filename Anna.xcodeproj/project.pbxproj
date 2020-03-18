@@ -3,10 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		49AFAC066030AE648E098EAD /* Pods_Anna.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C34CE888288B111995732E7 /* Pods_Anna.framework */; };
+		63E356978CFC37FB7478D26D /* Pods_Anna_AnnaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F3894DD117AB5AAADA0B205 /* Pods_Anna_AnnaUITests.framework */; };
+		7ECBC21D2BDF7F1361471BDC /* Pods_AnnaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0962F8018F32CB0CE5C8F84A /* Pods_AnnaTests.framework */; };
 		BE4AB49F2421CE65004A03ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4AB49E2421CE65004A03ED /* AppDelegate.swift */; };
 		BE4AB4A12421CE65004A03ED /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4AB4A02421CE65004A03ED /* SceneDelegate.swift */; };
 		BE4AB4A32421CE65004A03ED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4AB4A22421CE65004A03ED /* ViewController.swift */; };
@@ -15,6 +18,9 @@
 		BE4AB4AB2421CE66004A03ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE4AB4A92421CE66004A03ED /* LaunchScreen.storyboard */; };
 		BE4AB4B62421CE66004A03ED /* AnnaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4AB4B52421CE66004A03ED /* AnnaTests.swift */; };
 		BE4AB4C12421CE66004A03ED /* AnnaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4AB4C02421CE66004A03ED /* AnnaUITests.swift */; };
+		BE4AB4CF2421D048004A03ED /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE4AB4CE2421D047004A03ED /* GoogleService-Info.plist */; };
+		BE4AB4D124228BD2004A03ED /* DailyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4AB4D024228BD2004A03ED /* DailyViewController.swift */; };
+		BE4AB4D324228BDC004A03ED /* SecretViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4AB4D224228BDC004A03ED /* SecretViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +41,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		BE4AB49B2421CE65004A03ED /* Anna.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Anna.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0962F8018F32CB0CE5C8F84A /* Pods_AnnaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnnaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		31A49C3FF2BE3B7E620AE381 /* Pods-AnnaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnnaTests.debug.xcconfig"; path = "Target Support Files/Pods-AnnaTests/Pods-AnnaTests.debug.xcconfig"; sourceTree = "<group>"; };
+		348489DB45BB8B06C85C3DB1 /* Pods-AnnaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnnaTests.release.xcconfig"; path = "Target Support Files/Pods-AnnaTests/Pods-AnnaTests.release.xcconfig"; sourceTree = "<group>"; };
+		4F3894DD117AB5AAADA0B205 /* Pods_Anna_AnnaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Anna_AnnaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C34CE888288B111995732E7 /* Pods_Anna.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Anna.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9FE0CD36A210B1DA0256673F /* Pods-Anna-AnnaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Anna-AnnaUITests.release.xcconfig"; path = "Target Support Files/Pods-Anna-AnnaUITests/Pods-Anna-AnnaUITests.release.xcconfig"; sourceTree = "<group>"; };
+		BE4AB49B2421CE65004A03ED /* Anna & Harin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Anna & Harin.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE4AB49E2421CE65004A03ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE4AB4A02421CE65004A03ED /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		BE4AB4A22421CE65004A03ED /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +61,12 @@
 		BE4AB4BC2421CE66004A03ED /* AnnaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnnaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE4AB4C02421CE66004A03ED /* AnnaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnaUITests.swift; sourceTree = "<group>"; };
 		BE4AB4C22421CE66004A03ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE4AB4CE2421D047004A03ED /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BE4AB4D024228BD2004A03ED /* DailyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyViewController.swift; sourceTree = "<group>"; };
+		BE4AB4D224228BDC004A03ED /* SecretViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecretViewController.swift; sourceTree = "<group>"; };
+		CE916DFBDCEC28CE34BDBB5A /* Pods-Anna-AnnaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Anna-AnnaUITests.debug.xcconfig"; path = "Target Support Files/Pods-Anna-AnnaUITests/Pods-Anna-AnnaUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		EF1764BB7075239E8132B743 /* Pods-Anna.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Anna.release.xcconfig"; path = "Target Support Files/Pods-Anna/Pods-Anna.release.xcconfig"; sourceTree = "<group>"; };
+		F19A3AF5A75191F8F1AC664B /* Pods-Anna.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Anna.debug.xcconfig"; path = "Target Support Files/Pods-Anna/Pods-Anna.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49AFAC066030AE648E098EAD /* Pods_Anna.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7ECBC21D2BDF7F1361471BDC /* Pods_AnnaTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +90,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63E356978CFC37FB7478D26D /* Pods_Anna_AnnaUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1512FD9E817AF30AE0DBDD3B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F19A3AF5A75191F8F1AC664B /* Pods-Anna.debug.xcconfig */,
+				EF1764BB7075239E8132B743 /* Pods-Anna.release.xcconfig */,
+				CE916DFBDCEC28CE34BDBB5A /* Pods-Anna-AnnaUITests.debug.xcconfig */,
+				9FE0CD36A210B1DA0256673F /* Pods-Anna-AnnaUITests.release.xcconfig */,
+				31A49C3FF2BE3B7E620AE381 /* Pods-AnnaTests.debug.xcconfig */,
+				348489DB45BB8B06C85C3DB1 /* Pods-AnnaTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		926E043005962DD30673D169 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6C34CE888288B111995732E7 /* Pods_Anna.framework */,
+				4F3894DD117AB5AAADA0B205 /* Pods_Anna_AnnaUITests.framework */,
+				0962F8018F32CB0CE5C8F84A /* Pods_AnnaTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BE4AB4922421CE65004A03ED = {
 			isa = PBXGroup;
 			children = (
@@ -83,13 +127,15 @@
 				BE4AB4B42421CE66004A03ED /* AnnaTests */,
 				BE4AB4BF2421CE66004A03ED /* AnnaUITests */,
 				BE4AB49C2421CE65004A03ED /* Products */,
+				1512FD9E817AF30AE0DBDD3B /* Pods */,
+				926E043005962DD30673D169 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		BE4AB49C2421CE65004A03ED /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BE4AB49B2421CE65004A03ED /* Anna.app */,
+				BE4AB49B2421CE65004A03ED /* Anna & Harin.app */,
 				BE4AB4B12421CE66004A03ED /* AnnaTests.xctest */,
 				BE4AB4BC2421CE66004A03ED /* AnnaUITests.xctest */,
 			);
@@ -102,10 +148,13 @@
 				BE4AB49E2421CE65004A03ED /* AppDelegate.swift */,
 				BE4AB4A02421CE65004A03ED /* SceneDelegate.swift */,
 				BE4AB4A22421CE65004A03ED /* ViewController.swift */,
+				BE4AB4D024228BD2004A03ED /* DailyViewController.swift */,
+				BE4AB4D224228BDC004A03ED /* SecretViewController.swift */,
 				BE4AB4A42421CE65004A03ED /* Main.storyboard */,
 				BE4AB4A72421CE66004A03ED /* Assets.xcassets */,
 				BE4AB4A92421CE66004A03ED /* LaunchScreen.storyboard */,
 				BE4AB4AC2421CE66004A03ED /* Info.plist */,
+				BE4AB4CE2421D047004A03ED /* GoogleService-Info.plist */,
 			);
 			path = Anna;
 			sourceTree = "<group>";
@@ -135,9 +184,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BE4AB4C52421CE66004A03ED /* Build configuration list for PBXNativeTarget "Anna" */;
 			buildPhases = (
+				4888D0483BC6A0B83194C45A /* [CP] Check Pods Manifest.lock */,
 				BE4AB4972421CE65004A03ED /* Sources */,
 				BE4AB4982421CE65004A03ED /* Frameworks */,
 				BE4AB4992421CE65004A03ED /* Resources */,
+				5DEC5E0FC9ED3E2A558198A2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -145,13 +196,14 @@
 			);
 			name = Anna;
 			productName = Anna;
-			productReference = BE4AB49B2421CE65004A03ED /* Anna.app */;
+			productReference = BE4AB49B2421CE65004A03ED /* Anna & Harin.app */;
 			productType = "com.apple.product-type.application";
 		};
 		BE4AB4B02421CE66004A03ED /* AnnaTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = BE4AB4C82421CE66004A03ED /* Build configuration list for PBXNativeTarget "AnnaTests" */;
 			buildPhases = (
+				6A4B9B62434EDE567E60A2C9 /* [CP] Check Pods Manifest.lock */,
 				BE4AB4AD2421CE66004A03ED /* Sources */,
 				BE4AB4AE2421CE66004A03ED /* Frameworks */,
 				BE4AB4AF2421CE66004A03ED /* Resources */,
@@ -170,9 +222,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BE4AB4CB2421CE66004A03ED /* Build configuration list for PBXNativeTarget "AnnaUITests" */;
 			buildPhases = (
+				055B24B1AF4CB15FC1FB1B0D /* [CP] Check Pods Manifest.lock */,
 				BE4AB4B82421CE66004A03ED /* Sources */,
 				BE4AB4B92421CE66004A03ED /* Frameworks */,
 				BE4AB4BA2421CE66004A03ED /* Resources */,
+				FC147E740D48951B67A495C0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -233,6 +287,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE4AB4AB2421CE66004A03ED /* LaunchScreen.storyboard in Resources */,
+				BE4AB4CF2421D048004A03ED /* GoogleService-Info.plist in Resources */,
 				BE4AB4A82421CE66004A03ED /* Assets.xcassets in Resources */,
 				BE4AB4A62421CE65004A03ED /* Main.storyboard in Resources */,
 			);
@@ -254,13 +309,118 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		055B24B1AF4CB15FC1FB1B0D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Anna-AnnaUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4888D0483BC6A0B83194C45A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Anna-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5DEC5E0FC9ED3E2A558198A2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Anna/Pods-Anna-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Anna/Pods-Anna-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Anna/Pods-Anna-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6A4B9B62434EDE567E60A2C9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AnnaTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FC147E740D48951B67A495C0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Anna-AnnaUITests/Pods-Anna-AnnaUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Anna-AnnaUITests/Pods-Anna-AnnaUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Anna-AnnaUITests/Pods-Anna-AnnaUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BE4AB4972421CE65004A03ED /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE4AB4D324228BDC004A03ED /* SecretViewController.swift in Sources */,
 				BE4AB4A32421CE65004A03ED /* ViewController.swift in Sources */,
 				BE4AB49F2421CE65004A03ED /* AppDelegate.swift in Sources */,
+				BE4AB4D124228BD2004A03ED /* DailyViewController.swift in Sources */,
 				BE4AB4A12421CE65004A03ED /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -432,6 +592,7 @@
 		};
 		BE4AB4C62421CE66004A03ED /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F19A3AF5A75191F8F1AC664B /* Pods-Anna.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -442,7 +603,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Harin.Anna;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Anna & Harin";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -450,6 +611,7 @@
 		};
 		BE4AB4C72421CE66004A03ED /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF1764BB7075239E8132B743 /* Pods-Anna.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -460,7 +622,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Harin.Anna;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Anna & Harin";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -468,6 +630,7 @@
 		};
 		BE4AB4C92421CE66004A03ED /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 31A49C3FF2BE3B7E620AE381 /* Pods-AnnaTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -490,6 +653,7 @@
 		};
 		BE4AB4CA2421CE66004A03ED /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 348489DB45BB8B06C85C3DB1 /* Pods-AnnaTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -512,6 +676,7 @@
 		};
 		BE4AB4CC2421CE66004A03ED /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE916DFBDCEC28CE34BDBB5A /* Pods-Anna-AnnaUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -532,6 +697,7 @@
 		};
 		BE4AB4CD2421CE66004A03ED /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9FE0CD36A210B1DA0256673F /* Pods-Anna-AnnaUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
