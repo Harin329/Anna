@@ -53,6 +53,10 @@
 	</array>
 	<key>NSCameraUsageDescription</key>
 	<string>For a Surprise</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>For a Surprise</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>For a Surprise</string>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

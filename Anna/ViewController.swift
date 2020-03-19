@@ -8,19 +8,32 @@
 
 import UIKit
 import Firebase
+import MapKit
+import CoreLocation
 
 let db = Firestore.firestore()
 var today = DayGift()
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var OpenImage: UIImageView!
     @IBOutlet weak var Greeting: UILabel!
     @IBOutlet weak var AR: UIButton!
+    @IBOutlet weak var DaysTo: UILabel!
     
+    private var myLoc = CLLocation(latitude: 49.2827, longitude: 123.1207)
+    private var locationManager = CLLocationManager()
     var password = "Harin"
+    var yay = Timestamp()
+    var goodLoc = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestAlwaysAuthorization()
+        locationManager.distanceFilter = 50
+        locationManager.startUpdatingLocation()
+        locationManager.delegate = self
         
         db.collection("Password").document("Password").getDocument { (document, error) in
             if let document = document, document.exists {
@@ -29,6 +42,45 @@ class ViewController: UIViewController {
                     self.AR.isHidden = false
                 } else {
                     self.AR.isHidden = true
+                }
+                self.yay = document.get("DaysUntil") as! Timestamp
+                
+                self.goodLoc = document.get("NiceLocation") as! [String]
+                
+                let dateNow = Date(timeIntervalSince1970: TimeInterval(Timestamp().seconds))
+                let dateTil = Date(timeIntervalSince1970: TimeInterval(self.yay.seconds))
+                
+                let daysLeft = dateTil.days(from: dateNow)
+                
+                self.DaysTo.text = String(daysLeft) + " Days Until Harin"
+                
+                //Quick Doc Adding
+                /*for i in 0..<(daysLeft + 1) {
+                    let d = Date().addingTimeInterval(TimeInterval(i * 86400))
+                    
+                    let formatter = DateFormatter()
+                    formatter.timeStyle = .none
+                    formatter.dateStyle = .medium
+                    
+                    // get the date time String from the date object
+                    let date = formatter.string(from: d) // Oct 8, 2016
+                    
+                    print(date)
+                    print(Timestamp(date: d))
+                    
+                    db.collection("Memories").addDocument(data: [
+                        "Date": date,
+                        "Link": "",
+                        "Message": "Hi Babe!",
+                        "Opened": false,
+                        "Timestamp": Timestamp(date: d)
+                    ])
+                }*/
+                
+                if (daysLeft > 153) {
+                    let alertController = UIAlertController(title: "Not Yet", message: "Check Back in " + String(daysLeft - 153) + " Days", preferredStyle: .alert)
+                    
+                    self.present(alertController, animated: true, completion: nil)
                 }
             }
         }
@@ -79,6 +131,42 @@ class ViewController: UIViewController {
         
     }
     
+    //Gets User Location Permission
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        switch status {
+        case .restricted:
+            print("Location access was restricted.")
+        case .denied:
+            print("User denied access to location.")
+        case .notDetermined:
+            print("Location status not determined.")
+        case .authorizedAlways: fallthrough
+        case .authorizedWhenInUse:
+            print("Location status is OK.")
+        @unknown default:
+            print("Location status unknown.")
+        }
+    }
+    
+    //User Location Failed to Retrieve
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        locationManager.stopUpdatingLocation()
+        print ("Unable to access your current location")
+    }
+    
+    //Function Recieves User Location and Movement
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        myLoc = locations.last!
+        let hash = Geohash.encode(latitude: myLoc.coordinate.latitude, longitude: myLoc.coordinate.longitude, length: 6)
+        
+        if (goodLoc.contains(hash)) {
+            self.AR.isHidden = false
+        } else {
+            self.AR.isHidden = true
+        }
+        
+    }
+    
     @IBAction func OpenDay(_ sender: Any) {
         if (today.ID != "") {
             let alertController = UIAlertController(title: "URGENT CONFIRMATION OF LOVE", message: "Do you promise to return to Harin on or before Aug 24, 2020?", preferredStyle: .alert)
@@ -120,10 +208,47 @@ class ViewController: UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
     
-    @IBAction func OpenAR(_ sender: Any) {
-    }
-    
-    
-    
 }
 
+
+extension Date {
+    /// Returns the amount of years from another date
+    func years(from date: Date) -> Int {
+        return Calendar.current.dateComponents([.year], from: date, to: self).year ?? 0
+    }
+    /// Returns the amount of months from another date
+    func months(from date: Date) -> Int {
+        return Calendar.current.dateComponents([.month], from: date, to: self).month ?? 0
+    }
+    /// Returns the amount of weeks from another date
+    func weeks(from date: Date) -> Int {
+        return Calendar.current.dateComponents([.weekOfMonth], from: date, to: self).weekOfMonth ?? 0
+    }
+    /// Returns the amount of days from another date
+    func days(from date: Date) -> Int {
+        return Calendar.current.dateComponents([.day], from: date, to: self).day ?? 0
+    }
+    /// Returns the amount of hours from another date
+    func hours(from date: Date) -> Int {
+        return Calendar.current.dateComponents([.hour], from: date, to: self).hour ?? 0
+    }
+    /// Returns the amount of minutes from another date
+    func minutes(from date: Date) -> Int {
+        return Calendar.current.dateComponents([.minute], from: date, to: self).minute ?? 0
+    }
+    /// Returns the amount of seconds from another date
+    func seconds(from date: Date) -> Int {
+        return Calendar.current.dateComponents([.second], from: date, to: self).second ?? 0
+    }
+    /// Returns the a custom time interval description from another date
+    func offset(from date: Date) -> String {
+        if years(from: date)   > 0 { return "\(years(from: date))y"   }
+        if months(from: date)  > 0 { return "\(months(from: date))M"  }
+        if weeks(from: date)   > 0 { return "\(weeks(from: date))w"   }
+        if days(from: date)    > 0 { return "\(days(from: date))d"    }
+        if hours(from: date)   > 0 { return "\(hours(from: date))h"   }
+        if minutes(from: date) > 0 { return "\(minutes(from: date))m" }
+        if seconds(from: date) > 0 { return "\(seconds(from: date))s" }
+        return ""
+    }
+}

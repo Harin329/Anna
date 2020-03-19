@@ -30,7 +30,7 @@ extension DayGift {
         self.Date = data["Date"] as? String ?? ""
         self.Link = data["Link"] as? String ?? ""
         self.Message = data["Message"] as? String ?? ""
-        self.Image = Storage.storage().reference().child("2020").child(day + ".JPG")
+        self.Image = Storage.storage().reference().child("2020").child(day + ".jpg")
         self.Opened = data["Opened"] as? Bool ?? false
     }
 }

@@ -29,7 +29,7 @@ class ARViewController: UIViewController {
         
         setupARSession()
         
-        let tap = UILongPressGestureRecognizer(target: self, action: #selector(self.handleTap(_:)))
+        let tap = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(_:)))
 
            view.addGestureRecognizer(tap)
 

@@ -23,6 +23,8 @@
 		BE7D41182422958200FF19BD /* DayGift.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7D41172422958200FF19BD /* DayGift.swift */; };
 		BE7D411A2422EFF300FF19BD /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7D41192422EFF300FF19BD /* ARViewController.swift */; };
 		BED0F68E2423E20E0017545E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BED0F68D2423E20E0017545E /* Assets.xcassets */; };
+		BED0F6902423F92C0017545E /* Geohash.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED0F68F2423F92C0017545E /* Geohash.swift */; };
+		BED0F6922423FC4A0017545E /* LocationSim.gpx in Resources */ = {isa = PBXBuildFile; fileRef = BED0F6912423FC4A0017545E /* LocationSim.gpx */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +70,8 @@
 		BE7D41172422958200FF19BD /* DayGift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayGift.swift; sourceTree = "<group>"; };
 		BE7D41192422EFF300FF19BD /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
 		BED0F68D2423E20E0017545E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BED0F68F2423F92C0017545E /* Geohash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Geohash.swift; sourceTree = "<group>"; };
+		BED0F6912423FC4A0017545E /* LocationSim.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = LocationSim.gpx; sourceTree = "<group>"; };
 		CE916DFBDCEC28CE34BDBB5A /* Pods-Anna-AnnaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Anna-AnnaUITests.debug.xcconfig"; path = "Target Support Files/Pods-Anna-AnnaUITests/Pods-Anna-AnnaUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		EF1764BB7075239E8132B743 /* Pods-Anna.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Anna.release.xcconfig"; path = "Target Support Files/Pods-Anna/Pods-Anna.release.xcconfig"; sourceTree = "<group>"; };
 		F19A3AF5A75191F8F1AC664B /* Pods-Anna.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Anna.debug.xcconfig"; path = "Target Support Files/Pods-Anna/Pods-Anna.debug.xcconfig"; sourceTree = "<group>"; };
@@ -127,6 +131,7 @@
 		BE4AB4922421CE65004A03ED = {
 			isa = PBXGroup;
 			children = (
+				BED0F6912423FC4A0017545E /* LocationSim.gpx */,
 				BE4AB49D2421CE65004A03ED /* Anna */,
 				BE4AB4B42421CE66004A03ED /* AnnaTests */,
 				BE4AB4BF2421CE66004A03ED /* AnnaUITests */,
@@ -156,6 +161,7 @@
 				BE4AB4D024228BD2004A03ED /* DailyViewController.swift */,
 				BE4AB4D224228BDC004A03ED /* SecretViewController.swift */,
 				BE7D41192422EFF300FF19BD /* ARViewController.swift */,
+				BED0F68F2423F92C0017545E /* Geohash.swift */,
 				BE4AB4A42421CE65004A03ED /* Main.storyboard */,
 				BE4AB4A92421CE66004A03ED /* LaunchScreen.storyboard */,
 				BED0F68D2423E20E0017545E /* Assets.xcassets */,
@@ -296,6 +302,7 @@
 				BE4AB4CF2421D048004A03ED /* GoogleService-Info.plist in Resources */,
 				BED0F68E2423E20E0017545E /* Assets.xcassets in Resources */,
 				BE4AB4A62421CE65004A03ED /* Main.storyboard in Resources */,
+				BED0F6922423FC4A0017545E /* LocationSim.gpx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,6 +437,7 @@
 				BE4AB49F2421CE65004A03ED /* AppDelegate.swift in Sources */,
 				BE4AB4D124228BD2004A03ED /* DailyViewController.swift in Sources */,
 				BE4AB4A12421CE65004A03ED /* SceneDelegate.swift in Sources */,
+				BED0F6902423F92C0017545E /* Geohash.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
