@@ -19,7 +19,7 @@
                                 <rect key="frame" x="36" y="416.5" width="342" height="63"/>
                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="50"/>
                                 <state key="normal" title="Open The Day">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
                                     <action selector="OpenDay:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g7Z-7x-whe"/>
@@ -63,6 +63,10 @@
                                 <state key="normal" title="I miss Harin">
                                     <color key="titleColor" red="0.25398445129394531" green="0.65756148099899292" blue="0.25545740127563477" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="OpenAR:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZU7-CV-UTY"/>
+                                    <segue destination="TTV-kM-9qz" kind="show" id="ck9-mr-Pgu"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -86,6 +90,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="BM1-C9-ITA"/>
                     <connections>
+                        <outlet property="AR" destination="Hkg-ma-2Ks" id="LFL-pa-4CL"/>
                         <outlet property="Greeting" destination="dQ2-Hh-9Mi" id="Kmc-oa-I8T"/>
                         <outlet property="OpenImage" destination="r4m-Eb-h64" id="ypO-ps-xaa"/>
                     </connections>
@@ -115,7 +120,7 @@
                                 <rect key="frame" x="20" y="44" width="374" height="30"/>
                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
                                 <state key="normal" title="Back">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" id="9Gf-e0-nzC"/>
@@ -139,6 +144,38 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Juw-Cv-1e3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="138" y="841"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="SWJ-fW-S1L">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="TTV-kM-9qz" customClass="ARViewController" customModule="Anna___Harin" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0rb-uC-P7P">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1XN-a1-oAi">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <gestureRecognizers/>
+                            </arscnView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="1XN-a1-oAi" firstAttribute="top" secondItem="0rb-uC-P7P" secondAttribute="top" id="3ra-fc-Mb3"/>
+                            <constraint firstItem="1XN-a1-oAi" firstAttribute="leading" secondItem="yu9-Q1-x8G" secondAttribute="leading" id="Es2-QN-xU1"/>
+                            <constraint firstAttribute="bottom" secondItem="1XN-a1-oAi" secondAttribute="bottom" id="QmP-3x-1is"/>
+                            <constraint firstItem="yu9-Q1-x8G" firstAttribute="trailing" secondItem="1XN-a1-oAi" secondAttribute="trailing" id="ZsA-24-GMA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="yu9-Q1-x8G"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="tro-xn-11b"/>
+                    <connections>
+                        <outlet property="sceneView" destination="1XN-a1-oAi" id="13b-zj-IdH"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="Back" id="K3H-S5-L7a"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kVj-jD-WxE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="880" y="840"/>
         </scene>
         <!--Daily View Controller-->
         <scene sceneID="HbN-Nv-KDv">
@@ -180,7 +217,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
                                 <state key="normal" title="Click Me!">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
                                     <action selector="OpenURL:" destination="ORL-em-pm9" eventType="touchUpInside" id="WEa-rm-pOA"/>
@@ -193,7 +230,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
                                 <state key="normal" title="Back">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" id="zn2-FN-VS7"/>
@@ -233,6 +270,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="zn2-FN-VS7"/>
+        <segue reference="K3H-S5-L7a"/>
     </inferredMetricsTieBreakers>
 </document>

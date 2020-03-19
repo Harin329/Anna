@@ -15,6 +15,7 @@ var today = DayGift()
 class ViewController: UIViewController {
     @IBOutlet weak var OpenImage: UIImageView!
     @IBOutlet weak var Greeting: UILabel!
+    @IBOutlet weak var AR: UIButton!
     
     var password = "Harin"
     
@@ -24,6 +25,11 @@ class ViewController: UIViewController {
         db.collection("Password").document("Password").getDocument { (document, error) in
             if let document = document, document.exists {
                 self.password = document.get("?") as! String
+                if (document.get("AR") as! Bool) {
+                    self.AR.isHidden = false
+                } else {
+                    self.AR.isHidden = true
+                }
             }
         }
         
@@ -113,5 +119,11 @@ class ViewController: UIViewController {
         // 4. Present the alert.
         self.present(alert, animated: true, completion: nil)
     }
+    
+    @IBAction func OpenAR(_ sender: Any) {
+    }
+    
+    
+    
 }
 

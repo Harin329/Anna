@@ -21,6 +21,10 @@ class SecretViewController: UIViewController {
         
         alertController.addAction(defaultAction)
         self.present(alertController, animated: true, completion: nil)
+        
+        db.collection("Password").document("Password").updateData([
+            "AR": true
+        ])
     }
     
 }

@@ -14,7 +14,6 @@
 		BE4AB4A12421CE65004A03ED /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4AB4A02421CE65004A03ED /* SceneDelegate.swift */; };
 		BE4AB4A32421CE65004A03ED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4AB4A22421CE65004A03ED /* ViewController.swift */; };
 		BE4AB4A62421CE65004A03ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE4AB4A42421CE65004A03ED /* Main.storyboard */; };
-		BE4AB4A82421CE66004A03ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE4AB4A72421CE66004A03ED /* Assets.xcassets */; };
 		BE4AB4AB2421CE66004A03ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE4AB4A92421CE66004A03ED /* LaunchScreen.storyboard */; };
 		BE4AB4B62421CE66004A03ED /* AnnaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4AB4B52421CE66004A03ED /* AnnaTests.swift */; };
 		BE4AB4C12421CE66004A03ED /* AnnaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4AB4C02421CE66004A03ED /* AnnaUITests.swift */; };
@@ -22,6 +21,8 @@
 		BE4AB4D124228BD2004A03ED /* DailyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4AB4D024228BD2004A03ED /* DailyViewController.swift */; };
 		BE4AB4D324228BDC004A03ED /* SecretViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4AB4D224228BDC004A03ED /* SecretViewController.swift */; };
 		BE7D41182422958200FF19BD /* DayGift.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7D41172422958200FF19BD /* DayGift.swift */; };
+		BE7D411A2422EFF300FF19BD /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7D41192422EFF300FF19BD /* ARViewController.swift */; };
+		BED0F68E2423E20E0017545E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BED0F68D2423E20E0017545E /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,7 +54,6 @@
 		BE4AB4A02421CE65004A03ED /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		BE4AB4A22421CE65004A03ED /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BE4AB4A52421CE65004A03ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		BE4AB4A72421CE66004A03ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BE4AB4AA2421CE66004A03ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BE4AB4AC2421CE66004A03ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE4AB4B12421CE66004A03ED /* AnnaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnnaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,6 +66,8 @@
 		BE4AB4D024228BD2004A03ED /* DailyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyViewController.swift; sourceTree = "<group>"; };
 		BE4AB4D224228BDC004A03ED /* SecretViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecretViewController.swift; sourceTree = "<group>"; };
 		BE7D41172422958200FF19BD /* DayGift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayGift.swift; sourceTree = "<group>"; };
+		BE7D41192422EFF300FF19BD /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
+		BED0F68D2423E20E0017545E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE916DFBDCEC28CE34BDBB5A /* Pods-Anna-AnnaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Anna-AnnaUITests.debug.xcconfig"; path = "Target Support Files/Pods-Anna-AnnaUITests/Pods-Anna-AnnaUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		EF1764BB7075239E8132B743 /* Pods-Anna.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Anna.release.xcconfig"; path = "Target Support Files/Pods-Anna/Pods-Anna.release.xcconfig"; sourceTree = "<group>"; };
 		F19A3AF5A75191F8F1AC664B /* Pods-Anna.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Anna.debug.xcconfig"; path = "Target Support Files/Pods-Anna/Pods-Anna.debug.xcconfig"; sourceTree = "<group>"; };
@@ -153,9 +155,10 @@
 				BE7D41172422958200FF19BD /* DayGift.swift */,
 				BE4AB4D024228BD2004A03ED /* DailyViewController.swift */,
 				BE4AB4D224228BDC004A03ED /* SecretViewController.swift */,
+				BE7D41192422EFF300FF19BD /* ARViewController.swift */,
 				BE4AB4A42421CE65004A03ED /* Main.storyboard */,
-				BE4AB4A72421CE66004A03ED /* Assets.xcassets */,
 				BE4AB4A92421CE66004A03ED /* LaunchScreen.storyboard */,
+				BED0F68D2423E20E0017545E /* Assets.xcassets */,
 				BE4AB4AC2421CE66004A03ED /* Info.plist */,
 				BE4AB4CE2421D047004A03ED /* GoogleService-Info.plist */,
 			);
@@ -291,7 +294,7 @@
 			files = (
 				BE4AB4AB2421CE66004A03ED /* LaunchScreen.storyboard in Resources */,
 				BE4AB4CF2421D048004A03ED /* GoogleService-Info.plist in Resources */,
-				BE4AB4A82421CE66004A03ED /* Assets.xcassets in Resources */,
+				BED0F68E2423E20E0017545E /* Assets.xcassets in Resources */,
 				BE4AB4A62421CE65004A03ED /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -420,6 +423,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE7D411A2422EFF300FF19BD /* ARViewController.swift in Sources */,
 				BE4AB4D324228BDC004A03ED /* SecretViewController.swift in Sources */,
 				BE4AB4A32421CE65004A03ED /* ViewController.swift in Sources */,
 				BE7D41182422958200FF19BD /* DayGift.swift in Sources */,
