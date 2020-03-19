@@ -612,7 +612,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ZLP5N3QR69;
+				DEVELOPMENT_TEAM = 35ZK849627;
 				INFOPLIST_FILE = Anna/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -631,7 +631,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ZLP5N3QR69;
+				DEVELOPMENT_TEAM = 35ZK849627;
 				INFOPLIST_FILE = Anna/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

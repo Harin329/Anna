@@ -92,8 +92,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         let formatter = DateFormatter()
         formatter.timeStyle = .none
         formatter.dateStyle = .medium
+        formatter.locale = Locale(identifier: "en_US_POSIX")
         
         // get the date time String from the date object
+        print(currentDateTime)
         let date = formatter.string(from: currentDateTime) // Oct 8, 2016
         // get the user's calendar
         let userCalendar = Calendar.current
@@ -114,6 +116,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             Greeting.text = "What are you doing up at this hour, Anna?"
         }
         
+        print(date)
         db.collection("Memories").whereField("Date", isEqualTo: date).getDocuments { (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
