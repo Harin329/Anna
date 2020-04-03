@@ -23,9 +23,9 @@ class DailyViewController: UIViewController {
         SDImageCache.shared.clearMemory()
         SDImageCache.shared.clearDisk()
         
-        db.collection("Memories").document(DayData.ID).updateData([
+        /*db.collection("Memories").document(DayData.ID).updateData([
             "Opened": true
-        ])
+        ])*/
         
         Date.text = DayData.Date
         DailyMessage.text = DayData.Message
