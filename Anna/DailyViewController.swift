@@ -8,7 +8,6 @@
 
 import UIKit
 import Firebase
-import FirebaseUI
 import SDWebImage
 
 class DailyViewController: UIViewController {
@@ -24,15 +23,15 @@ class DailyViewController: UIViewController {
         SDImageCache.shared.clearDisk()
         
         /*db.collection("Memories").document(DayData.ID).updateData([
-            "Opened": true
-        ])*/
+         "Opened": true
+         ])*/
         
         Date.text = DayData.Date
         DailyMessage.text = DayData.Message
         DailyPic.layer.cornerRadius = 5
-        DailyPic.sd_setImage(with: DayData.Image)
-        
-        
+        DayData.Image.downloadURL(completion: { (url, error) in
+            self.DailyPic.sd_setImage(with: url)
+        })
     }
     
     @IBAction func OpenURL(_ sender: Any) {
@@ -56,5 +55,5 @@ class DailyViewController: UIViewController {
     }
     
     
-
+    
 }
