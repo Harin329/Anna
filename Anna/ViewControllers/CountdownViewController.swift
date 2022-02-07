@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  CountdownViewController.swift
 //  Anna
 //
 //  Created by Harin Wu on 2020-03-17.
@@ -14,7 +14,7 @@ import CoreLocation
 let db = Firestore.firestore()
 var today = DayGift()
 
-class ViewController: UIViewController, CLLocationManagerDelegate {
+class CountdownViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var OpenImage: UIImageView!
     @IBOutlet weak var Greeting: UILabel!
     @IBOutlet weak var AR: UIButton!

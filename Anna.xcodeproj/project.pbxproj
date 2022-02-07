@@ -10,9 +10,11 @@
 		49AFAC066030AE648E098EAD /* Pods_Anna.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C34CE888288B111995732E7 /* Pods_Anna.framework */; };
 		63E356978CFC37FB7478D26D /* Pods_Anna_AnnaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F3894DD117AB5AAADA0B205 /* Pods_Anna_AnnaUITests.framework */; };
 		7ECBC21D2BDF7F1361471BDC /* Pods_AnnaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0962F8018F32CB0CE5C8F84A /* Pods_AnnaTests.framework */; };
+		BE28C51327B105C20077DAB7 /* Countdown2020.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE28C51227B105C20077DAB7 /* Countdown2020.storyboard */; };
+		BE28C51527B107C50077DAB7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE28C51427B107C50077DAB7 /* ViewController.swift */; };
 		BE4AB49F2421CE65004A03ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4AB49E2421CE65004A03ED /* AppDelegate.swift */; };
 		BE4AB4A12421CE65004A03ED /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4AB4A02421CE65004A03ED /* SceneDelegate.swift */; };
-		BE4AB4A32421CE65004A03ED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4AB4A22421CE65004A03ED /* ViewController.swift */; };
+		BE4AB4A32421CE65004A03ED /* CountdownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4AB4A22421CE65004A03ED /* CountdownViewController.swift */; };
 		BE4AB4A62421CE65004A03ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE4AB4A42421CE65004A03ED /* Main.storyboard */; };
 		BE4AB4AB2421CE66004A03ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE4AB4A92421CE66004A03ED /* LaunchScreen.storyboard */; };
 		BE4AB4B62421CE66004A03ED /* AnnaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4AB4B52421CE66004A03ED /* AnnaTests.swift */; };
@@ -51,10 +53,12 @@
 		4F3894DD117AB5AAADA0B205 /* Pods_Anna_AnnaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Anna_AnnaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C34CE888288B111995732E7 /* Pods_Anna.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Anna.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FE0CD36A210B1DA0256673F /* Pods-Anna-AnnaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Anna-AnnaUITests.release.xcconfig"; path = "Target Support Files/Pods-Anna-AnnaUITests/Pods-Anna-AnnaUITests.release.xcconfig"; sourceTree = "<group>"; };
+		BE28C51227B105C20077DAB7 /* Countdown2020.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Countdown2020.storyboard; sourceTree = "<group>"; };
+		BE28C51427B107C50077DAB7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BE4AB49B2421CE65004A03ED /* Anna & Harin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Anna & Harin.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE4AB49E2421CE65004A03ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE4AB4A02421CE65004A03ED /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BE4AB4A22421CE65004A03ED /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BE4AB4A22421CE65004A03ED /* CountdownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownViewController.swift; sourceTree = "<group>"; };
 		BE4AB4A52421CE65004A03ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BE4AB4AA2421CE66004A03ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BE4AB4AC2421CE66004A03ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -128,6 +132,43 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		BE28C50E27B1046D0077DAB7 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				BED0F68F2423F92C0017545E /* Geohash.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		BE28C50F27B1048F0077DAB7 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BE4AB4A22421CE65004A03ED /* CountdownViewController.swift */,
+				BE28C51427B107C50077DAB7 /* ViewController.swift */,
+				BE4AB4D024228BD2004A03ED /* DailyViewController.swift */,
+				BE4AB4D224228BDC004A03ED /* SecretViewController.swift */,
+				BE7D41192422EFF300FF19BD /* ARViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		BE28C51027B104A50077DAB7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BE7D41172422958200FF19BD /* DayGift.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BE28C51127B104E10077DAB7 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				BE4AB4A42421CE65004A03ED /* Main.storyboard */,
+				BE28C51227B105C20077DAB7 /* Countdown2020.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		BE4AB4922421CE65004A03ED = {
 			isa = PBXGroup;
 			children = (
@@ -156,13 +197,10 @@
 			children = (
 				BE4AB49E2421CE65004A03ED /* AppDelegate.swift */,
 				BE4AB4A02421CE65004A03ED /* SceneDelegate.swift */,
-				BE4AB4A22421CE65004A03ED /* ViewController.swift */,
-				BE7D41172422958200FF19BD /* DayGift.swift */,
-				BE4AB4D024228BD2004A03ED /* DailyViewController.swift */,
-				BE4AB4D224228BDC004A03ED /* SecretViewController.swift */,
-				BE7D41192422EFF300FF19BD /* ARViewController.swift */,
-				BED0F68F2423F92C0017545E /* Geohash.swift */,
-				BE4AB4A42421CE65004A03ED /* Main.storyboard */,
+				BE28C51027B104A50077DAB7 /* Models */,
+				BE28C50F27B1048F0077DAB7 /* ViewControllers */,
+				BE28C50E27B1046D0077DAB7 /* Utils */,
+				BE28C51127B104E10077DAB7 /* Storyboards */,
 				BE4AB4A92421CE66004A03ED /* LaunchScreen.storyboard */,
 				BED0F68D2423E20E0017545E /* Assets.xcassets */,
 				BE4AB4AC2421CE66004A03ED /* Info.plist */,
@@ -302,6 +340,7 @@
 				BE4AB4CF2421D048004A03ED /* GoogleService-Info.plist in Resources */,
 				BED0F68E2423E20E0017545E /* Assets.xcassets in Resources */,
 				BE4AB4A62421CE65004A03ED /* Main.storyboard in Resources */,
+				BE28C51327B105C20077DAB7 /* Countdown2020.storyboard in Resources */,
 				BED0F6922423FC4A0017545E /* LocationSim.gpx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -432,7 +471,8 @@
 			files = (
 				BE7D411A2422EFF300FF19BD /* ARViewController.swift in Sources */,
 				BE4AB4D324228BDC004A03ED /* SecretViewController.swift in Sources */,
-				BE4AB4A32421CE65004A03ED /* ViewController.swift in Sources */,
+				BE4AB4A32421CE65004A03ED /* CountdownViewController.swift in Sources */,
+				BE28C51527B107C50077DAB7 /* ViewController.swift in Sources */,
 				BE7D41182422958200FF19BD /* DayGift.swift in Sources */,
 				BE4AB49F2421CE65004A03ED /* AppDelegate.swift in Sources */,
 				BE4AB4D124228BD2004A03ED /* DailyViewController.swift in Sources */,
