@@ -82,51 +82,69 @@ class CountdownViewController: UIViewController, CLLocationManagerDelegate {
                     
                     self.present(alertController, animated: true, completion: nil)
                 }
-            }
-        }
-        
-        // get the current date and time
-        let currentDateTime = Date()
-        
-        // initialize the date formatter and set the style
-        let formatter = DateFormatter()
-        formatter.timeStyle = .none
-        formatter.dateStyle = .medium
-        formatter.locale = Locale(identifier: "en_US_POSIX")
-        
-        // get the date time String from the date object
-        print(currentDateTime)
-        let date = formatter.string(from: currentDateTime) // Oct 8, 2016
-        // get the user's calendar
-        let userCalendar = Calendar.current
-        // choose which date and time components are needed
-        let requestedComponents: Set<Calendar.Component> = [
-            .hour
-        ]
-        // get the components
-        let dateTimeComponents = userCalendar.dateComponents(requestedComponents, from: currentDateTime)
-        // now the components are available
-        if (dateTimeComponents.hour! >= 7 && dateTimeComponents.hour! <= 12) {
-            Greeting.text = "Good Morning Anna"
-        } else if (dateTimeComponents.hour! > 12 && dateTimeComponents.hour! <= 18) {
-            Greeting.text = "Good Afternoon Anna"
-        } else if (dateTimeComponents.hour! > 18 && dateTimeComponents.hour! <= 24) {
-            Greeting.text = "Good Evening Anna"
-        } else {
-            Greeting.text = "What are you doing up at this hour, Anna?"
-        }
-        
-        print(date)
-        db.collection("Memories").whereField("Date", isEqualTo: date).getDocuments { (querySnapshot, err) in
-            if let err = err {
-                print("Error getting documents: \(err)")
-            } else {
-                for document in querySnapshot!.documents {
-                    today = DayGift(ID: document.documentID, data: document.data())
-                    if (document.get("Opened") as! Bool) {
-                        self.OpenImage.image = UIImage(systemName: "gift")
-                    } else  {
-                        self.OpenImage.image = UIImage(systemName: "gift.fill")
+                
+                
+                
+                // get the current date and time
+                let currentDateTime = Date()
+                
+                // initialize the date formatter and set the style
+                let formatter = DateFormatter()
+                formatter.timeStyle = .none
+                formatter.dateStyle = .medium
+                formatter.locale = Locale(identifier: "en_US_POSIX")
+                
+                // get the date time String from the date object
+                // print(currentDateTime)
+                let date = formatter.string(from: currentDateTime) // Oct 8, 2016
+                // get the user's calendar
+                let userCalendar = Calendar.current
+                // choose which date and time components are needed
+                let requestedComponents: Set<Calendar.Component> = [
+                    .hour
+                ]
+                // get the components
+                let dateTimeComponents = userCalendar.dateComponents(requestedComponents, from: currentDateTime)
+                // now the components are available
+                if (dateTimeComponents.hour! >= 7 && dateTimeComponents.hour! <= 12) {
+                    self.Greeting.text = "Good Morning Anna"
+                } else if (dateTimeComponents.hour! > 12 && dateTimeComponents.hour! <= 18) {
+                    self.Greeting.text = "Good Afternoon Anna"
+                } else if (dateTimeComponents.hour! > 18 && dateTimeComponents.hour! <= 24) {
+                    self.Greeting.text = "Good Evening Anna"
+                } else {
+                    self.Greeting.text = "What are you doing up at this hour, Anna?"
+                }
+                
+                print(date)
+                if (daysLeft < 0) {
+                    db.collection("Memories").getDocuments { (querySnapshot, err) in
+                        if let err = err {
+                            print("Error getting documents: \(err)")
+                        } else {
+                            let document = querySnapshot!.documents.shuffled()[0]
+                            today = DayGift(ID: document.documentID, data: document.data())
+                            if (document.get("Opened") as! Bool) {
+                                self.OpenImage.image = UIImage(systemName: "gift")
+                            } else  {
+                                self.OpenImage.image = UIImage(systemName: "gift.fill")
+                            }
+                        }
+                    }
+                } else {
+                    db.collection("Memories").whereField("Date", isEqualTo: date).getDocuments { (querySnapshot, err) in
+                        if let err = err {
+                            print("Error getting documents: \(err)")
+                        } else {
+                            for document in querySnapshot!.documents {
+                                today = DayGift(ID: document.documentID, data: document.data())
+                                if (document.get("Opened") as! Bool) {
+                                    self.OpenImage.image = UIImage(systemName: "gift")
+                                } else  {
+                                    self.OpenImage.image = UIImage(systemName: "gift.fill")
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -175,7 +193,21 @@ class CountdownViewController: UIViewController, CLLocationManagerDelegate {
             let alertController = UIAlertController(title: "URGENT CONFIRMATION OF LOVE", message: "Do you promise to return to Harin on or before Aug 24, 2020?", preferredStyle: .alert)
             let defaultAction = UIAlertAction(title: "Um...", style: .cancel, handler: nil)
             let promiseAction = UIAlertAction(title: "I Promise", style: .default, handler: { (alert:UIAlertAction!) -> Void in
-                let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+                let storyboard = UIStoryboard(name: "Countdown2020", bundle: Bundle.main)
+                let vc = storyboard.instantiateViewController(withIdentifier: "DailyBoard") as! DailyViewController
+                vc.DayData = today
+                self.OpenImage.image = UIImage(systemName: "gift")
+                self.present(vc, animated:true, completion:nil)
+            })
+            
+            alertController.addAction(defaultAction)
+            alertController.addAction(promiseAction)
+            self.present(alertController, animated: true, completion: nil)
+        } else {
+            let alertController = UIAlertController(title: "URGENT CONFIRMATION OF LOVE", message: "Do you promise to return to Harin on or before Aug 24, 2020?", preferredStyle: .alert)
+            let defaultAction = UIAlertAction(title: "Um...", style: .cancel, handler: nil)
+            let promiseAction = UIAlertAction(title: "I Promise", style: .default, handler: { (alert:UIAlertAction!) -> Void in
+                let storyboard = UIStoryboard(name: "Countdown2020", bundle: Bundle.main)
                 let vc = storyboard.instantiateViewController(withIdentifier: "DailyBoard") as! DailyViewController
                 vc.DayData = today
                 self.OpenImage.image = UIImage(systemName: "gift")
@@ -201,7 +233,7 @@ class CountdownViewController: UIViewController, CLLocationManagerDelegate {
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak alert] (_) in
             let textField = alert?.textFields![0] // Force unwrapping because we know it exists.
             if (textField?.text == self.password) {
-                let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+                let storyboard = UIStoryboard(name: "Countdown2020", bundle: Bundle.main)
                 let vc = storyboard.instantiateViewController(withIdentifier: "SecretViewController") as! SecretViewController
                 self.present(vc, animated:true, completion:nil)
             }
@@ -211,47 +243,4 @@ class CountdownViewController: UIViewController, CLLocationManagerDelegate {
         self.present(alert, animated: true, completion: nil)
     }
     
-}
-
-
-extension Date {
-    /// Returns the amount of years from another date
-    func years(from date: Date) -> Int {
-        return Calendar.current.dateComponents([.year], from: date, to: self).year ?? 0
-    }
-    /// Returns the amount of months from another date
-    func months(from date: Date) -> Int {
-        return Calendar.current.dateComponents([.month], from: date, to: self).month ?? 0
-    }
-    /// Returns the amount of weeks from another date
-    func weeks(from date: Date) -> Int {
-        return Calendar.current.dateComponents([.weekOfMonth], from: date, to: self).weekOfMonth ?? 0
-    }
-    /// Returns the amount of days from another date
-    func days(from date: Date) -> Int {
-        return Calendar.current.dateComponents([.day], from: date, to: self).day ?? 0
-    }
-    /// Returns the amount of hours from another date
-    func hours(from date: Date) -> Int {
-        return Calendar.current.dateComponents([.hour], from: date, to: self).hour ?? 0
-    }
-    /// Returns the amount of minutes from another date
-    func minutes(from date: Date) -> Int {
-        return Calendar.current.dateComponents([.minute], from: date, to: self).minute ?? 0
-    }
-    /// Returns the amount of seconds from another date
-    func seconds(from date: Date) -> Int {
-        return Calendar.current.dateComponents([.second], from: date, to: self).second ?? 0
-    }
-    /// Returns the a custom time interval description from another date
-    func offset(from date: Date) -> String {
-        if years(from: date)   > 0 { return "\(years(from: date))y"   }
-        if months(from: date)  > 0 { return "\(months(from: date))M"  }
-        if weeks(from: date)   > 0 { return "\(weeks(from: date))w"   }
-        if days(from: date)    > 0 { return "\(days(from: date))d"    }
-        if hours(from: date)   > 0 { return "\(hours(from: date))h"   }
-        if minutes(from: date) > 0 { return "\(minutes(from: date))m" }
-        if seconds(from: date) > 0 { return "\(seconds(from: date))s" }
-        return ""
-    }
 }

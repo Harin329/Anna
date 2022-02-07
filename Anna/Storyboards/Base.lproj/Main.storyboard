@@ -20,18 +20,61 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zBa-99-yCf">
                                 <rect key="frame" x="99" y="802" width="216" height="31"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Blast of Nostalgia!"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Blast of Nostalgia!">
+                                    <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="ViewPast:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MmH-dg-A8X"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="33G-bN-Qq1">
+                                <rect key="frame" x="10" y="73" width="394" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="eJB-xI-UwN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p10-3U-6rp">
+                                <rect key="frame" x="109" y="398" width="196" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="UcR-di-iIc"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Open My Gift!">
+                                            <attributes>
+                                                <color key="NSColor" red="0.3961316943" green="0.76923191550000003" blue="0.39992812280000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <font key="NSFont" size="24" name="Copperplate-Bold"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseForegroundColor" red="0.3961316943" green="0.76923191550000003" blue="0.39992812280000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="OpenGift:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IVv-dN-uNJ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="p10-3U-6rp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2Zb-G0-blj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="33G-bN-Qq1" secondAttribute="trailing" constant="10" id="59n-vv-Zcx"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zBa-99-yCf" secondAttribute="bottom" constant="29" id="N75-wd-9FZ"/>
+                            <constraint firstItem="p10-3U-6rp" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="PCe-qL-YWX"/>
+                            <constraint firstItem="33G-bN-Qq1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="Prr-jn-bhW"/>
+                            <constraint firstItem="33G-bN-Qq1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="29" id="dZn-1W-IRV"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zBa-99-yCf" secondAttribute="trailing" constant="99" id="t2r-lh-Nuy"/>
                             <constraint firstItem="zBa-99-yCf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="99" id="uCa-ZL-95F"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="BM1-C9-ITA"/>
+                    <connections>
+                        <outlet property="Greeting" destination="33G-bN-Qq1" id="bUT-aC-bRA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -41,6 +84,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
